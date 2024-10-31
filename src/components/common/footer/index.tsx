@@ -28,7 +28,7 @@ const Footer = () => {
                         © 2024 GDG GTBIT All Rights Reserved.
                     </span>
                     <div className="flex mt-4 sm:mt-0 sm:justify-center">
-                        {['Instagram', 'LinkedIn', 'Twitter', 'Github'].map((platform) => (
+                        {['Instagram', 'LinkedIn', 'Twitter', 'Github', 'Facebook'].map((platform) => (
                             <a
                                 key={platform}
                                 href={`https://www.${platform.toLowerCase()}.com/gdggtbit`}
