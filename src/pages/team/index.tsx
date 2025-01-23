@@ -15,7 +15,7 @@ function Index() {
         <h2 className="text-3xl md:text-4xl font-bold mb-6">Meet Our Team</h2>
         <p className="text-gray-400 text-center max-w-2xl mb-10">
           Our team consists of passionate individuals who work together to drive innovation and success. 
-          Meet the minds behind our project and connect with them via LinkedIn and GitHub.
+          Meet the minds behind our project and connect with them via LinkedIn and GitHub..
         </p>
       </div>
 
