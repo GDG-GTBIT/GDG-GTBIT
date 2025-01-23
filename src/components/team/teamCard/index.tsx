@@ -1,63 +1,75 @@
-import React from 'react';
-import { FaLinkedin, FaGithub, FaEnvelope } from 'react-icons/fa'; // Import email icon
+import React from "react";
 
-interface TeamCardProps {
-  name: string;
-  position: string;
-  linkedIn: string;
-  github: string;
-  email: string;  
-  colorIndex: number;
-}
-
-const colors = ['#4285F4', '#DB4437', '#F4B400', '#0F9D58'];
-
-const TeamCard = ({ name, position, linkedIn, github, email, colorIndex }: TeamCardProps) => {
-  const cardBorderColor = colors[colorIndex % colors.length];
-
+const MeetTheTeam = () => {
   return (
-    <div
-      className="bg-[#232323] p-6 rounded-3xl shadow-xl hover:shadow-2xl transition-all transform hover:scale-105 flex flex-col justify-between w-64 "
-      style={{ border: `1px solid ${cardBorderColor}` }} 
-    >
-      <div className="flex flex-col items-center mb-4">
-        <h3 className="text-2xl font-bold text-white mb-2 text-center hover:text-gray-300 transition-colors cursor-pointer">
-          {name}
-        </h3>
-        <p className="text-gray-400 mb-4 text-center">{position}</p>
+    <div className="bg-black min-h-screen flex flex-col items-center justify-center p-6">
+   
+      <div className="text-center text-white mb-10">
+        <h1 className="text-4xl font-bold mb-4">MEET THE TEAM</h1>
+        <p className="text-gray-400 max-w-md mx-auto">
+          Here’s our team — the faces behind GDG GTBIT. We’re a group of passionate individuals working together to create, innovate, and grow as a community.
+        </p>
       </div>
 
-      <div className="mt-auto flex justify-center space-x-4">
-        <a href={linkedIn} target="_blank" rel="noopener noreferrer">
-          <div
-            className="p-2 rounded-full hover:bg-blue-600 transition-colors"
-            style={{ backgroundColor: cardBorderColor }} 
-          >
-            <FaLinkedin className="text-white" />
-          </div>
-        </a>
 
-        <a href={github} target="_blank" rel="noopener noreferrer">
-          <div
-            className="p-2 rounded-full hover:bg-gray-500 transition-colors"
-            style={{ backgroundColor: cardBorderColor }} 
-          >
-            <FaGithub className="text-white" />
+      <div className="flex items-center justify-center">
+   
+        <div
+          className="bg-gradient-to-r from-gray-800 to-gray-600 rounded-xl p-6 text-center w-[400px] shadow-2xl relative overflow-hidden"
+          style={{
+            boxShadow: "0 0 30px rgba(255, 255, 255, 0.2)", 
+          }}
+        >
+          <h2 className="text-xl font-semibold mb-2 text-white">ML Team</h2>
+          <p className="text-gray-300 mb-4 text-sm">
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+            has been the industry's standard.
+          </p>
+          <div className="flex items-center justify-center relative">
+    
+            {Array(6)
+              .fill("")
+              .map((_, index) => (
+                <div
+                  key={index}
+                  className="w-10 h-10 bg-white rounded-full border-[2px] border-blue-500"
+                  style={{
+                    marginLeft: index === 0 ? "0" : "-10px",
+                  }}
+                ></div>
+              ))}
+       
+            <button className="absolute right-[-10px] bg-white text-black font-medium px-4 py-1 text-sm rounded-full border-[2px] border-gray-300 shadow-md hover:shadow-lg">
+              See more →
+            </button>
           </div>
-        </a>
+        
+          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[rgba(255,255,255,0.05)] to-transparent rounded-xl blur-md opacity-20"></div>
+        </div>
 
-        {/* Update the mailto link */}
-        <a href={`mailto:${email}`}>
-          <div
-            className="p-2 rounded-full hover:bg-red-600 transition-colors"
-            style={{ backgroundColor: cardBorderColor }} 
-          >
-            <FaEnvelope className="text-white" />
-          </div>
-        </a>
+   
+        <div className="relative ml-10">
+
+          <img
+            src="/images/01227a1b8d4fed656c99b71a9dd644d3.png"
+            alt="Building Icon"
+            className="w-80"
+          />
+
+          <img
+            src="/images/d8e2c7828281af2bc7c4426ea0aefac4.png" 
+            alt="Logo"
+            className="absolute top-[-10%] left-[50%] translate-x-[-50%] w-7 h-7 translate-y-[60%]"
+          />
+          <img
+            src="/images/1c692522660313d9d9c9b71b011bf5d8.png" 
+            alt="Logo"
+            className="absolute top-[-10%] left-[40%] translate-x-[-34%] w-7 h-7 translate-y-[60%]"
+          />
+        </div>
       </div>
     </div>
   );
 };
 
-export default TeamCard;
+export default MeetTheTeam;
