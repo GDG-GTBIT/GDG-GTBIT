@@ -31,7 +31,7 @@ function EventCard() {
     }
 
     return (
-        <div className="h-[300px] md:h-[400px] bg-black p-8">
+        <div className="min-h-screen overflow-hidden bg-black p-8">
             <div className="mx-auto max-w-6xl">
 
                 <h1
@@ -40,7 +40,7 @@ function EventCard() {
                     OUR EVENTS
                 </h1>
 
-                <h2 className={` ${pixelifySans.className} text-white text-center text-lg md:text-xl mb-12`}>
+                <h2 className={` ${pixelifySans.className} text-2lg md:text-3xl mb-12 bg-gradient-to-b from-white via-pink-100 to-pink-200 text-center text-transparent bg-clip-text`}>
                     Showcasing the Milestones of Innovation and Creativity
                 </h2>
 
@@ -104,7 +104,7 @@ function EventCard() {
                     ))}
                 </div>
 
-                <h3 className={` ${pixelifySans.className} text-white text-center text-xl md:text-2xl font-medium`}>
+                <h3 className={` ${pixelifySans.className} text-white text-center text-2xl md:text-3xl font-medium bg-gradient-to-b from-white via-pink-100 to-pink-200 text-transparent bg-clip-text`}>
                     Unveiling GDG GTBIT&apos;s Eventful Journey: Celebrating Ideas, Innovation, and Achievements
                 </h3>
             </div>
