@@ -16,3 +16,60 @@ body {
     text-wrap: balance;
   }
 }
+
+.card{
+  transform-style: preserve-3d;
+}
+
+.front{
+  backface-visibility: hidden;
+}
+
+.back{
+  backface-visibility: hidden;
+  transform: rotateY(180deg);
+}
+
+.parent{
+  perspective: 5000px;
+}
+
+.redcard{
+  background-color: #e7e7e7;
+  background-color: #DB4437;
+  background: linear-gradient(
+    76deg,
+    #e7e7e7 -20%,
+    #DB4437 65%
+  );
+}
+
+.bluecard{
+  background-color: #e7e7e7;
+  background-color: #DB4437;
+  background: linear-gradient(
+    76deg,
+    #e7e7e7 -20%,
+    #4285F4 65%
+  );
+}
+
+.greencard{
+  background-color: #e7e7e7;
+  background-color: #DB4437;
+  background: linear-gradient(
+    76deg,
+    #e7e7e7 -20%,
+    #0F9D58 65%
+  );
+}
+
+.yellowcard{
+  background-color: #e7e7e7;
+  background-color: #DB4437;
+  background: linear-gradient(
+    76deg,
+    #e7e7e7 -20%,
+    #FFBA00 65%
+  );
+}
