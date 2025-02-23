@@ -1,7 +1,5 @@
-import EventCard from "@/components/EventCard";
+import EventCard from '@/components/event-card';
 
 export default function Home() {
-  return (
-    <EventCard />
-  );
+  return <EventCard />;
 }
